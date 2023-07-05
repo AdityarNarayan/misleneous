@@ -1,46 +1,196 @@
 # misleneous
 It contains miscellaneous code
 
-[
-    'APT', 'Apartment', 'Suite', 'Unit', 'Floor', 'Building', 'Room', 'Box',
-    'P.O. Box', 'PO Box', 'Box #', 'Box No', 'Box Number', 'PO Box No',
-    'PO Box Number', 'PO Box #', 'Mailbox', 'MB', 'Postal', 'Code',
-    'ZIP', 'ZIP Code', 'Postal Code', 'Area', 'Region', 'District',
-    'Province', 'State', 'County', 'Parish', 'Territory', 'Country',
-    'Nation', 'Republic', 'Kingdom', 'Empire', 'Commonwealth', 'Island',
-    'Peninsula', 'Archipelago', 'Cape', 'Mountain', 'Hill', 'Valley',
-    'Canyon', 'River', 'Lake', 'Ocean', 'Sea', 'Gulf', 'Bay', 'Strait',
-    'Straits', 'Port', 'Harbor', 'Wharf', 'Dock', 'Quay', 'Jetty', 'Pier',
-    'Beach', 'Coast', 'Shore', 'Headland', 'Head', 'Meadow', 'Field', 'Plain',
-    'Prairie', 'Desert', 'Woods', 'Forest', 'Jungle', 'Swamp', 'Marsh',
-    'Hills', 'Mountains', 'Ridge', 'Pass', 'Peak', 'Summit', 'Plateau',
-    'Gorge', 'Cave', 'Cavern', 'Cliff', 'Ledge', 'Rock', 'Stone', 'Quarry',
-    'Mine', 'Coal Mine', 'Oil Field', 'Gas Field', 'Reservoir', 'Dam',
-    'Waterfall', 'Falls', 'Spring', 'Well', 'Stream', 'Creek', 'Brook',
-    'River', 'Lake', 'Pond', 'Island', 'Peninsula', 'Harbor', 'Garden',
-    'Park', 'Zoo', 'Reserve', 'Sanctuary', 'National', 'Monument', 'Monastery',
-    'Museum', 'Gallery', 'Library', 'University', 'College', 'School',
-    'Institute', 'Academy', 'Hospital', 'Clinic', 'Medical', 'Center',
-    'Health', 'Department', 'Police', 'Station', 'Post', 'Office', 'Bank',
-    'ATM', 'Supermarket', 'Market', 'Store', 'Shop', 'Mall', 'Plaza',
-    'Square', 'Road', 'Street', 'Avenue', 'Boulevard', 'Lane', 'Drive',
-    'Court', 'Place', 'Terrace', 'Circle', 'Crescent', 'Close', 'Cul-de-sac',
-    'Highway', 'Freeway', 'Expressway', 'Route', 'Path', 'Trail', 'Way',
-    'Walk', 'Pathway', 'Alley', 'Garden', 'Road', 'Frontage', 'Service',
-    'Access', 'Ramp', 'Bridge', 'Tunnel', 'Intersection', 'Roundabout',
-    'Junction', 'Overpass', 'Underpass', 'Railway', 'Station', 'Airport',
-    'Terminal', 'Bus', 'Stop', 'Ferry', 'Pier', 'Parking', 'Lot', 'Garage',
-    'Ramp', 'Area', 'Zone', 'Estate', 'Subdivision', 'Development', 'Complex',
-    'Village', 'Town', 'City', 'Metropolis', 'Metropolitan', 'Urban',
-    'Rural', 'Suburb', 'Neighborhood', 'Community', 'District', 'Block',
-    'Sector', 'Building', 'Structure', 'Landmark', 'Point', 'Place', 'Venue',
-    'Spot', 'Location', 'Address', 'Number', 'Route', 'Street', 'Avenue',
-    'Lane', 'Drive', 'Road', 'Way', 'Place', 'Court', 'Square', 'Plaza',
-    'Terrace', 'Circle', 'Crescent', 'Alley', 'Highway', 'Freeway', 'Expressway',
-    'Route', 'Path', 'Trail', 'Bridge', 'Tunnel', 'Railway', 'Station',
-    'Airport', 'Bus', 'Stop', 'Ferry', 'Pier', 'Parking', 'Lot', 'Garage',
-    'Zone', 'Subdivision', 'Complex', 'Village', 'Town', 'City', 'Metropolis',
-    'Urban', 'Rural', 'Suburb', 'Neighborhood', 'Community', 'Block',
-    'District', 'Sector', 'Building', 'Landmark', 'Point', 'Venue', 'Spot',
-    'Location'
-]
+Afghanistan, AF
+Albania, AL
+Algeria, DZ
+Andorra, AD
+Angola, AO
+Antigua and Barbuda, AG
+Argentina, AR
+Armenia, AM
+Australia, AU
+Austria, AT
+Azerbaijan, AZ
+Bahamas, BS
+Bahrain, BH
+Bangladesh, BD
+Barbados, BB
+Belarus, BY
+Belgium, BE
+Belize, BZ
+Benin, BJ
+Bhutan, BT
+Bolivia, BO
+Bosnia and Herzegovina, BA
+Botswana, BW
+Brazil, BR
+Brunei, BN
+Bulgaria, BG
+Burkina Faso, BF
+Burundi, BI
+Cambodia, KH
+Cameroon, CM
+Canada, CA
+Cape Verde, CV
+Central African Republic, CF
+Chad, TD
+Chile, CL
+China, CN
+Colombia, CO
+Comoros, KM
+Congo, CG
+Costa Rica, CR
+Croatia, HR
+Cuba, CU
+Cyprus, CY
+Czech Republic, CZ
+Denmark, DK
+Djibouti, DJ
+Dominica, DM
+Dominican Republic, DO
+East Timor, TL
+Ecuador, EC
+Egypt, EG
+El Salvador, SV
+Equatorial Guinea, GQ
+Eritrea, ER
+Estonia, EE
+Ethiopia, ET
+Fiji, FJ
+Finland, FI
+France, FR
+Gabon, GA
+Gambia, GM
+Georgia, GE
+Germany, DE
+Ghana, GH
+Greece, GR
+Grenada, GD
+Guatemala, GT
+Guinea, GN
+Guinea-Bissau, GW
+Guyana, GY
+Haiti, HT
+Honduras, HN
+Hungary, HU
+Iceland, IS
+India, IN
+Indonesia, ID
+Iran, IR
+Iraq, IQ
+Ireland, IE
+Israel, IL
+Italy, IT
+Jamaica, JM
+Japan, JP
+Jordan, JO
+Kazakhstan, KZ
+Kenya, KE
+Kiribati, KI
+Korea (North), KP
+Korea (South), KR
+Kuwait, KW
+Kyrgyzstan, KG
+Laos, LA
+Latvia, LV
+Lebanon, LB
+Lesotho, LS
+Liberia, LR
+Libya, LY
+Liechtenstein, LI
+Lithuania, LT
+Luxembourg, LU
+Macedonia, MK
+Madagascar, MG
+Malawi, MW
+Malaysia, MY
+Maldives, MV
+Mali, ML
+Malta, MT
+Marshall Islands, MH
+Mauritania, MR
+Mauritius, MU
+Mexico, MX
+Micronesia, FM
+Moldova, MD
+Monaco, MC
+Mongolia, MN
+Montenegro, ME
+Morocco, MA
+Mozambique, MZ
+Myanmar, MM
+Namibia, NA
+Nauru, NR
+Nepal, NP
+Netherlands, NL
+New Zealand, NZ
+Nicaragua, NI
+Niger, NE
+Nigeria, NG
+Norway, NO
+Oman, OM
+Pakistan, PK
+Palau, PW
+Panama, PA
+Papua New Guinea, PG
+Paraguay, PY
+Peru, PE
+Philippines, PH
+Poland, PL
+Portugal, PT
+Qatar, QA
+Romania, RO
+Russia, RU
+Rwanda, RW
+Saint Kitts and Nevis, KN
+Saint Lucia, LC
+Saint Vincent and the Grenadines, VC
+Samoa, WS
+San Marino, SM
+Sao Tome and Principe, ST
+Saudi Arabia, SA
+Senegal, SN
+Serbia, RS
+Seychelles, SC
+Sierra Leone, SL
+Singapore, SG
+Slovakia, SK
+Slovenia, SI
+Solomon Islands, SB
+Somalia, SO
+South Africa, ZA
+South Sudan, SS
+Spain, ES
+Sri Lanka, LK
+Sudan, SD
+Suriname, SR
+Swaziland, SZ
+Sweden, SE
+Switzerland, CH
+Syria, SY
+Taiwan, TW
+Tajikistan, TJ
+Tanzania, TZ
+Thailand, TH
+Togo, TG
+Tonga, TO
+Trinidad and Tobago, TT
+Tunisia, TN
+Turkey, TR
+Turkmenistan, TM
+Tuvalu, TV
+Uganda, UG
+Ukraine, UA
+United Arab Emirates, AE
+United Kingdom, GB
+United States, US
+Uruguay, UY
+Uzbekistan, UZ
+Vanuatu, VU
+Vatican City, VA
+Venezuela, VE
+Vietnam, VN
+Yemen, YE
+Zambia, ZM
+Zimbabwe, ZW
