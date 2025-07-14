@@ -41,3 +41,5 @@ Private Function Category(ByVal w As String) As Long
         Category = 1                               'ALPHA
     End If
 End Function
+
+
