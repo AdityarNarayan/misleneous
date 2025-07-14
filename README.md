@@ -1,37 +1,30 @@
-
-Sub CopyFilesAndUpdateStatus()
+Sub ExtractCounterpartyNames()
     Dim ws As Worksheet
     Dim lastRow As Long
     Dim i As Long
-    Dim sourcePath As String
-    Dim destFolder As String
-    Dim fileName As String
-    Dim fso As Object
+    Dim fullText As String
+    Dim namePart As String
+    Dim arrParts() As String
 
-    Set ws = ThisWorkbook.Sheets(1) ' Change if your data is on another sheet
-    Set fso = CreateObject("Scripting.FileSystemObject")
-    destFolder = "C:\Your\Destination\Folder\" ' <-- Change this to your destination folder
-
+    Set ws = ThisWorkbook.Sheets(1) ' Adjust if needed
     lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
 
-    For i = 2 To lastRow ' Assuming headers in row 1
-        sourcePath = ws.Cells(i, "A").Value
-        If fso.FileExists(sourcePath) Then
-            fileName = fso.GetFileName(sourcePath)
-            On Error Resume Next
-            fso.CopyFile sourcePath, destFolder & fileName, False
-            If Err.Number = 0 Then
-                ws.Cells(i, "B").Value = "Copied"
+    For i = 2 To lastRow ' Assuming header in row 1
+        fullText = Trim(ws.Cells(i, "A").Value)
+        If fullText <> "" Then
+            arrParts = Split(fullText, " ")
+            If UBound(arrParts) > 0 Then
+                ' Remove the last part (assumed to be reference number)
+                namePart = Join(Application.Index(arrParts, 1, 0), " ", 0, UBound(arrParts) - 1)
+                ws.Cells(i, "B").Value = namePart
+                ' For grouping: standardize (e.g., uppercase, remove extra spaces)
+                ws.Cells(i, "C").Value = UCase(Trim(namePart))
             Else
-                ws.Cells(i, "B").Value = "Error: " & Err.Description
-                Err.Clear
+                ws.Cells(i, "B").Value = fullText
+                ws.Cells(i, "C").Value = UCase(Trim(fullText))
             End If
-            On Error GoTo 0
-        Else
-            ws.Cells(i, "B").Value = "File Not Found"
         End If
     Next i
 
-    Set fso = Nothing
-    MsgBox "Copy process complete.", vbInformation
+    MsgBox "Extraction complete!", vbInformation
 End Sub
