@@ -1,106 +1,11 @@
 
-Option Explicit
-
-'=========== Tunables ===========
-Private Const SHORT_NUM_MAXLEN As Long = 4
-Private Const ALLOWED_SYM      As String = "/-&'.()"
-
-'--- stopper lists (ALL UPPER-CASE) -------------
-Private STOP_1W() As String      'single-word stoppers
-Private STOP_2W() As String      'two-word  stoppers
-
-'=========== Public macro ===========
-Sub ExtractEntityName_WithStoppers()
-
-    InitStoppers                                'load the arrays once
-
-    Dim ws As Worksheet
-    Dim lastRow As Long, r As Long, rawTxt As String
-
-    Set ws = ThisWorkbook.Worksheets(1)
-    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
-
-    For r = 2 To lastRow
-        rawTxt = Trim$(CStr(ws.Cells(r, "A").Value))
-        ws.Cells(r, "B").Value = EntityChunk(rawTxt)
-    Next r
-
-    MsgBox "Done with stoppers!", vbInformation
-End Sub
-
-
-'=========== Core extractor ===========
-Private Function EntityChunk(ByVal txt As String) As String
-
-    If Len(txt) = 0 Then Exit Function
-
-    Dim tok() As String: tok = Split(txt, " ")
-    Dim keep() As String: ReDim keep(UBound(tok))
-    Dim i As Long, k As Long, ub As Long: ub = UBound(tok)
-
-    For i = 0 To ub
-
-        Dim w As String: w = tok(i)
-        If Len(w) = 0 Then GoTo nxt                      'skip blank tokens
-
-        '----- 0.  STOPPER CHECK -----------------------
-        If IsStopper(tok, i, ub) Then Exit For           'end BEFORE stopper
-        '-----------------------------------------------
-
-        '----- 1.  Normal word rules -------------------
-        Select Case Category(w)
-            Case 1      'ALPHA
-                keep(k) = w: k = k + 1
-
-            Case 2      'SHORTNUM
-                If i < ub And Category(tok(i + 1)) = 1 Then
-                    keep(k) = w: k = k + 1
-                Else
-                    Exit For
-                End If
-
-            Case Else   'LONGNUM or NONALNUM
-                Exit For
-        End Select
-nxt:
-    Next i
-
-    If k > 0 Then
-        ReDim Preserve keep(k - 1)
-        EntityChunk = Join(keep, " ")
-    End If
-End Function
-
-
-'=========== STOPPER logic ===========
-Private Function IsStopper(tok() As String, idx As Long, ub As Long) As Boolean
-
-    Dim curUC As String: curUC = UCase$(tok(idx))
-
-    '--- single-word ------------------
-    Dim s As Variant
-    For Each s In STOP_1W
-        If curUC = s Then IsStopper = True: Exit Function
-    Next s
-
-    '--- two-word ---------------------
-    If idx < ub Then
-        Dim nxtUC As String: nxtUC = UCase$(tok(idx + 1))
-        Dim phrase As String: phrase = curUC & " " & nxtUC
-        For Each s In STOP_2W
-            If phrase = s Then IsStopper = True: Exit Function
-        Next s
-    End If
-End Function
-
-
-'=========== Word categoriser (unchanged) ===========
-'  1 = ALPHA, 2 = SHORTNUM, 3 = LONGNUM, 4 = NONALNUM
+'--- replace the whole Category function with this version ‑--
+'  1 = ALPHA, 2 = SHORTNUM, 3 = LONGNUM, 4 = NONALNUM, 5 = ALPHANUM_ID
 Private Function Category(ByVal w As String) As Long
-
+    
     Dim i As Long, ch As String
     Dim hasLetter As Boolean, invalid As Boolean
-
+    
     For i = 1 To Len(w)
         ch = Mid$(w, i, 1)
         Select Case ch
@@ -112,29 +17,27 @@ Private Function Category(ByVal w As String) As Long
                 End If
         End Select
     Next i
-
+    
+    '--- NEW: detect pattern <letter><digits> --------------
+    If Not invalid Then
+        If hasLetter And Len(w) >= 2 _
+           And Mid$(w, 1, 1) Like "[A-Za-z]" _
+           And Mid$(w, 2) Like String(Len(w) - 1, "#") Then
+                Category = 5                       'ALPHANUM_ID
+                Exit Function
+        End If
+    End If
+    '-------------------------------------------------------
+    
     If invalid Then
-        Category = 4
+        Category = 4                               'NONALNUM
     ElseIf Not hasLetter Then
         If Len(w) <= SHORT_NUM_MAXLEN Then
-            Category = 2
+            Category = 2                           'SHORTNUM
         Else
-            Category = 3
+            Category = 3                           'LONGNUM
         End If
     Else
-        Category = 1
+        Category = 1                               'ALPHA
     End If
 End Function
-
-
-'=========== Initialise stopper arrays ===========
-Private Sub InitStoppers()
-
-    Static done As Boolean
-    If done Then Exit Sub
-
-    STOP_1W = Split("HCCLAIMPMT|PAYMENT|TPSDEBIT", "|")
-    STOP_2W = Split("CLAIM PAY", "|")         'add more 2-word phrases with |
-
-    done = True
-End Sub
