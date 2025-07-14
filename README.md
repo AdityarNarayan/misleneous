@@ -6,34 +6,29 @@ Sub ExtractCounterpartyNames()
     Dim namePart As String
     Dim arrParts() As String
 
-    Sub ExtractCounterpartyNames()
+ 
+Sub ExtractName_RemoveTrailingNumbers()
     Dim ws As Worksheet
     Dim lastRow As Long
     Dim i As Long
     Dim fullText As String
     Dim namePart As String
-    Dim arrParts() As String
-    Dim j As Long
+    Dim regex As Object
 
-    Set ws = ThisWorkbook.Sheets(1) ' Adjust if needed
+    Set ws = ThisWorkbook.Sheets(1) ' Adjust as needed
     lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
 
+    Set regex = CreateObject("VBScript.RegExp")
+    regex.Pattern = "\s*\d+\s*$"   ' Matches any number at the end, with optional spaces before/after
+    regex.IgnoreCase = True
+    regex.Global = False
+
     For i = 2 To lastRow ' Assuming header in row 1
-        fullText = Trim(ws.Cells(i, "A").Value)
+        fullText = ws.Cells(i, "A").Value
         If fullText <> "" Then
-            arrParts = Split(fullText, " ")
-            If UBound(arrParts) > 0 Then
-                namePart = ""
-                For j = 0 To UBound(arrParts) - 1
-                    namePart = namePart & arrParts(j) & " "
-                Next j
-                namePart = Trim(namePart)
-                ws.Cells(i, "B").Value = namePart
-                ws.Cells(i, "C").Value = UCase(Trim(namePart))
-            Else
-                ws.Cells(i, "B").Value = fullText
-                ws.Cells(i, "C").Value = UCase(Trim(fullText))
-            End If
+            namePart = regex.Replace(fullText, "") ' Remove trailing number and spaces
+            ws.Cells(i, "B").Value = Trim(namePart)
+            ws.Cells(i, "C").Value = UCase(Trim(namePart))
         End If
     Next i
 
