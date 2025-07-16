@@ -1,10 +1,15 @@
-If k > 0 Then
-    ReDim resultArr(0 To k - 1)
-    Dim i As Long
-    For i = 0 To k - 1
-        resultArr(i) = keep(i)
+
+Private Function IsAlphanumeric(ByVal w As String) As Boolean
+    Dim hasLetter As Boolean, hasDigit As Boolean
+    Dim i As Long, ch As String
+    For i = 1 To Len(w)
+        ch = Mid$(w, i, 1)
+        If ch Like "[A-Za-z]" Then hasLetter = True
+        If ch Like "[0-9]" Then hasDigit = True
+        If hasLetter And hasDigit Then
+            IsAlphanumeric = True
+            Exit Function
+        End If
     Next i
-    EntityChunk = Join(resultArr, " ")
-Else
-    EntityChunk = ""
-End If
+    IsAlphanumeric = False
+End Function
