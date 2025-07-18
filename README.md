@@ -1,9 +1,9 @@
 =LET(
     cat, "ACH In",
     cust, CustomerFilter,
-    ben, FILTER(Data!AO:AO, (Data!L:L=cat)*(Data!AN:AN=cust)),
+    ben, FILTER(Data!AO2:AO10000, (Data!L2:L10000=cat)*(Data!AN2:AN10000=cust)),
     benU, UNIQUE(ben),
-    benAmt, BYROW(benU, LAMBDA(b, SUMIFS(Data!K:K, Data!AO:AO, b, Data!L:L, cat, Data!AN:AN, cust))),
+    benAmt, BYROW(benU, LAMBDA(b, SUMIFS(Data!K2:K10000, Data!AO2:AO10000, b, Data!L2:L10000, cat, Data!AN2:AN10000, cust))),
     sortIdx, SORTBY(SEQUENCE(ROWS(benU)), -benAmt),
     benU2, INDEX(benU, sortIdx),
     benAmt2, INDEX(benAmt, sortIdx),
