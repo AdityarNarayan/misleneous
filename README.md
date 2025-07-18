@@ -1,1 +1,1 @@
-=FILTER(Data!A:AO, Data!AN:AN = Search_Page!C4, "No data found")
+ (=Excel.CurrentWorkbook(){[Name="CustomerFilter"]}[Content]{0}[Column1])
