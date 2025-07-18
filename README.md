@@ -8,6 +8,20 @@ let
         {{"Total Credit", each List.Sum([Credit Amount]), type number}}
     ),
     SortedRows = Table.Sort(GroupedRows, {{"Total Credit", Order.Descending}}),
-    Top5Rows = Table.FirstN(SortedRows, 5)
+    TotalCredit = List.Sum(SortedRows[Total Credit]),
+    AddRunningTotal = Table.AddIndexColumn(SortedRows, "Index", 0, 1),
+    AddRunningSum = Table.AddColumn(
+        AddRunningTotal,
+        "Running Total",
+        each List.Sum(List.FirstN(AddRunningTotal[Total Credit], [Index]+1)),
+        type number
+    ),
+    AddCumulativePct = Table.AddColumn(
+        AddRunningSum,
+        "Cumulative %",
+        each [Running Total] / TotalCredit,
+        type number
+    ),
+    TopBeneficiaries = Table.SelectRows(AddCumulativePct, each [Cumulative %] <= 0.5)
 in
-    Top5Rows
+    TopBeneficiaries
