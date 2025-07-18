@@ -3,3 +3,7 @@ let
     FilteredRows = Table.SelectRows(Source, each [Customer Name] = CustomerName)
 in
     FilteredRows
+
+
+
+    = Excel.CurrentWorkbook(){[Name="CustomerFilter"]}[Content]{0}[Column1]
