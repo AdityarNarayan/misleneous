@@ -1,7 +1,5 @@
-=SUM(
-    IF(
-        COUNTIF(Sheet1!E3:E106, "Include") > 5,
-        FILTER(Sheet1!B3:B101, Sheet1!E3:E106="Include"),
-        TAKE(SORT(Sheet1!B3:B101, 1, -1), 5)
-    )
+AND(
+  NOT(ISNUMBER(A1)),
+  ISERROR(MATCH(LOWER(A1), {"total","summary","n/a"}, 0)),
+  COUNTIF($A$1:$A$100, A1) > 1
 )
