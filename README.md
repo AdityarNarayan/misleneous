@@ -1,1 +1,2 @@
-Act as VBA Expert. I have data in one sheet. I have Beneficiary Name, category, Case_ID, Debit and Credit. There are transactions related to 10 case IDS. On a case level basis , I want top 5 beneficiary name from each category as per credit amount in different sheet. Beneficiary name in column AP, Case Id in Column AO, category in column L and credit in column K
+border=1 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;border:none'
