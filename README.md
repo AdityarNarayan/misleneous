@@ -653,3 +653,142 @@ color:windowtext'><span style='font-family:"MS Gothic"'>&#9744;</span><b> N/A  
     padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
     <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
     </td>
+
+     <td width=75 nowrap style='width:56.5pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=99 nowrap style='width:74.15pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=65 nowrap style='width:48.65pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=95 nowrap style='width:71.4pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+   </tr>
+   <tr style='height:15.0pt'>
+    <td width=161 nowrap style='width:120.7pt;border:solid windowtext 1.0pt;
+    border-top:none;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b>Other*</b></p>
+    </td>
+    <td width=90 nowrap style='width:67.5pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=75 nowrap style='width:56.1pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=75 nowrap style='width:56.5pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=99 nowrap style='width:74.15pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=65 nowrap style='width:48.65pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+    <td width=95 nowrap style='width:71.4pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+    </td>
+   </tr>
+   <tr style='height:15.0pt'>
+    <td width=161 nowrap style='width:120.7pt;border:solid windowtext 1.0pt;
+    border-top:none;background:#C1E4F5;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='color:black'>Grand Total</span></b></p>
+    </td>
+    <td width=90 nowrap style='width:67.5pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    background:#C1E4F5;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='color:black'>$</span></b></p>
+    </td>
+    <td width=75 nowrap style='width:56.1pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    background:#C1E4F5;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'></td>
+    <td width=75 nowrap style='width:56.5pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    background:#C1E4F5;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='color:black'>%</span></b></p>
+    </td>
+    <td width=99 nowrap style='width:74.15pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    background:#C1E4F5;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='color:black'>$</span></b></p>
+    </td>
+    <td width=65 nowrap style='width:48.65pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    background:#C1E4F5;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'></td>
+    <td width=95 nowrap style='width:71.4pt;border-top:none;border-left:none;
+    border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+    background:#C1E4F5;padding:0in 5.4pt 0in 5.4pt;height:15.0pt'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+    style='color:black'>%</span></b></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>*<span style='font-size:8.0pt'>Other Activity typically consists
+  of bank service charges/refunds and Point of Sale (debit card) transactions.
+  ATM cash out transactions are to be included in the Cash category; check
+  deposits conducted via the ATM are to be included in the Checks category; and
+  Checks, ACH or Wire returns are to be included in the respective category.
+  Loan payments issued from checking/savings account are to be included in the
+  appropriate category (i.e., ACH, Checks, Internal Transfers &amp; Wires).</span>
+  </p>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='height:23.8pt'>
+  <td width=757 colspan=3 style='width:567.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:#C1E4F5;padding:0in 5.75pt 0in 5.75pt;height:23.8pt'>
+  <p class=MsoNormal><span style='color:black'>ACH In </span><span
+  style='font-size:8.0pt;color:black'>(specify the account(s) involved below,
+  indicating the specific date(s) the activity occurred on/between):                                        
+  </span></p>
+  </td>
+ </tr>
+ <tr style='height:23.75pt'>
+  <td width=757 colspan=3 style='width:567.75pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt;height:23.75pt'>
+  <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='height:23.75pt'>
+  <td width=757 colspan=3 style='width:567.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:#C1E4F5;padding:0in 5.75pt 0in 5.75pt;height:23.75pt'>
+  <p class=MsoNormal><span style='color:black'>ACH Out </span><span
+  style='font-size:8.0pt;color:black'>(specify the account(s) involved below,
+  indicating the specific date(s) the activity occurred on/between):                                          
+  </span></p>
+  </td>
+ </tr>
+ <tr style='height:23.75pt'>
+  <td width=757 colspan=3 style='width:567.75pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.75pt 0in 5.75pt;height:23.75pt'>
+  <p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  </td>
+ </tr>
